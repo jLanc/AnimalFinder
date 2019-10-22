@@ -26,5 +26,11 @@ class StatusViewController: UIViewController {
         ]
     }
     
+    // MARK: - IBOutlets
+    
+    //these link the back end code to the front end ui
+    @IBOutlet weak private var messagePanel: UIVisualEffectView!
+    @IBOutlet weak private var messageLabel: UILabel!
+    @IBOutlet weak private var restartExperienceButton: UIButton!
     
 }
