@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2315B967235F569300EC8D8B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2315B966235F569300EC8D8B /* StatusViewController.swift */; };
+		2315B969235F56A300EC8D8B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2315B968235F56A300EC8D8B /* Utilities.swift */; };
 		2322BC672354AEDE00A8FB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322BC662354AEDE00A8FB21 /* AppDelegate.swift */; };
 		2322BC692354AEDE00A8FB21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322BC682354AEDE00A8FB21 /* SceneDelegate.swift */; };
 		2322BC6B2354AEDE00A8FB21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322BC6A2354AEDE00A8FB21 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2315B966235F569300EC8D8B /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		2315B968235F56A300EC8D8B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2322BC632354AEDE00A8FB21 /* Animal Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2322BC662354AEDE00A8FB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2322BC682354AEDE00A8FB21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2315B965235F565F00EC8D8B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2322BC662354AEDE00A8FB21 /* AppDelegate.swift */,
+				2315B966235F569300EC8D8B /* StatusViewController.swift */,
+				2315B968235F56A300EC8D8B /* Utilities.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		2322BC5A2354AEDE00A8FB21 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +70,6 @@
 		2322BC652354AEDE00A8FB21 /* Animal Finder */ = {
 			isa = PBXGroup;
 			children = (
-				2322BC662354AEDE00A8FB21 /* AppDelegate.swift */,
 				2322BC682354AEDE00A8FB21 /* SceneDelegate.swift */,
 				2322BC6A2354AEDE00A8FB21 /* ViewController.swift */,
 				2322BC7A2354B14400A8FB21 /* Resources */,
@@ -64,6 +77,7 @@
 				2322BC6F2354AEE000A8FB21 /* Assets.xcassets */,
 				2322BC712354AEE000A8FB21 /* LaunchScreen.storyboard */,
 				2322BC742354AEE000A8FB21 /* Info.plist */,
+				2315B965235F565F00EC8D8B /* Support */,
 			);
 			path = "Animal Finder";
 			sourceTree = "<group>";
@@ -146,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2315B967235F569300EC8D8B /* StatusViewController.swift in Sources */,
 				2322BC6B2354AEDE00A8FB21 /* ViewController.swift in Sources */,
 				2322BC672354AEDE00A8FB21 /* AppDelegate.swift in Sources */,
+				2315B969235F56A300EC8D8B /* Utilities.swift in Sources */,
 				2322BC692354AEDE00A8FB21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
