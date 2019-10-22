@@ -33,4 +33,15 @@ class StatusViewController: UIViewController {
     @IBOutlet weak private var messageLabel: UILabel!
     @IBOutlet weak private var restartExperienceButton: UIButton!
     
+    // MARK: - Properties
+    //triggers when the "Eestart Experience" button is pressed
+    var restartExperienceHandler: () ->Void = {}
+    
+    private let displayDuration: TimeInterval = 6
+    
+    //timer for hiding messages
+    private var messageHideTimer: Timer?
+    private var timers: [MessageType: Timer] = [:]
+    
+    
 }
