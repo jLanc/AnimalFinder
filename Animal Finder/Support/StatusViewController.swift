@@ -10,5 +10,21 @@ import Foundation
 import ARKit
 
 class StatusViewController: UIViewController {
+    //MARK: - Types
+    
+    enum MessageType {
+        case trackingStateEscalation
+        case plantEstimation
+        case contentPlacement
+        case focusSquare
+        
+        static var all: [MessageType] = [
+        .trackingStateEscalation,
+        .plantEstimation,
+        .contentPlacement,
+        .focusSquare
+        ]
+    }
+    
     
 }
