@@ -45,6 +45,22 @@ class StatusViewController: UIViewController {
     //timers is a dictonary type and the [:] means it has no elements
     private var timers: [MessageType: Timer] = [:]
     
+    // MARK: - Pannel Visibility
+    private func setMessageHidden(_ hide: Bool, animated: Bool)
+    {
+        //the pannel starts hidden so show it before animating opacity
+        messagePannel.isHidden = false
+        
+        guard animated else {
+            messagePannel.alpha = hide ? 0 : 1
+            return
+        }
+        
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.beingFromCurrentState], animations:{
+            self.messagePanel.alpha = hide ? 0 : 1
+        }, completion: nil)
+    }
+    
     // MARK: - Message Handlers
     func showMessage(_ text:String, autoHide: Bool = true)
     {
