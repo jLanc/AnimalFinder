@@ -41,7 +41,37 @@ class StatusViewController: UIViewController {
     
     //timer for hiding messages
     private var messageHideTimer: Timer?
+    
+    //timers is a dictonary type and the [:] means it has no elements
     private var timers: [MessageType: Timer] = [:]
     
+    // MARK: - Message Handlers
+    func showMessage(_ text:String, autoHide: Bool = true)
+    {
+        //Cancel any previous hide timer
+        messageHideTimer?.invalidate()
+        
+         messageLabel.text = text
+               
+        // Make sure status is showing.
+        setMessageHidden(false, animated: true)
+        
+        if autoHide {
+            messageHideTimer = Timer.scheduledTimer(withTimeInterval: displayDuration, repeats: False, block: block: { [weak self] _ in
+                self?.setMessageHidden(true, animated: true)
+            })
+        }
+    }
+    
+    func cancelScheduledMessage(`for` messageType: MessageType)
+    {
+        timers[messageType]?.invalidate()
+        timers[messageType] = nil
+    }
+    
+    func scheduleMessage(_ text: String, inSeconds seconds: TimeInterval, messageType: MessageType)
+    {
+        cancelScheduledMessage
+    }
     
 }
